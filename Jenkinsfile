@@ -10,13 +10,13 @@ pipeline {
             steps {
                 script {
                     sh 'rm -rf maven.java-fundamentals'
+                    sh 'ls -root'
                 }
             }
         }
         stage('SCM Checkout') {
             steps {
-                sh 'git clone https://github.com/k-charette/maven.java-fundamentals $PWD/maven.java-fundamentals'
-                sh 'ls -root'
+                sh 'git clone https://github.com/k-charette/maven.java-fundamentals $PWD/maven.java-fundamentals'        
             }
         }
         stage('Compile-Package-Test') {
