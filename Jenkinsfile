@@ -18,6 +18,13 @@ pipeline {
                 sh 'git clone https://github.com/k-charette/maven.java-fundamentals $PWD/maven.java-fundamentals'
             }
         }
+        stage('ls') {
+            steps {
+                script {
+                    sh 'ls /root'
+                }
+            }
+        }
         stage('Compile-Package-Test') {
             steps {
                 script {
